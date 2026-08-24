@@ -118,6 +118,7 @@ p {
   transform: rotate(5deg);
 }
 
+.birthdayCard.opened .cardFront,
 .birthdayCard:hover .cardFront {
   transform: rotateY(-175deg);
 }
