@@ -8,6 +8,8 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .birthdayCard {
@@ -18,7 +20,12 @@ body {
   cursor: pointer;
   transform-style: preserve-3d;
   perspective: 2000px;
-  transition: transform 1s;
+  transition: transform 1s ease, margin 0.8s ease;
+}
+
+.birthdayCard.opened {
+  transform: translateY(0) scale(1.02);
+  margin-top: 0;
 }
 
 .cardInside {
@@ -120,4 +127,57 @@ p {
 
 .birthdayCard.opened .cardFront {
   transform: rotateY(-175deg);
+}
+
+@media (max-width: 480px) {
+  .body {
+    padding: 16px;
+  }
+
+  .birthdayCard {
+    width: min(88vw, 360px);
+    height: 440px;
+    border-radius: 24px;
+  }
+
+  .cardInside,
+  .cardFront,
+  .cardFrontContent,
+  .cardFront::after {
+    border-radius: 0 12px 12px 0;
+  }
+
+  .balloons {
+    width: 180px;
+    right: -10px;
+    top: 20px;
+  }
+
+  .bdHat {
+    width: 110px;
+    left: 8%;
+  }
+
+  .taaImg {
+    width: 120px;
+    top: 110px;
+    left: 8%;
+  }
+
+  .happy {
+    left: 10%;
+    top: 85%;
+    font-size: 1.1em;
+  }
+
+  p {
+    line-height: 24px;
+    font-size: 0.9rem;
+    margin: 12px 12px 10px 22px;
+  }
+
+  .back {
+    font-size: 1.1rem;
+    margin: 24px 16px;
+  }
 }
