@@ -115,10 +115,9 @@ p {
 }
 
 .birthdayCard:hover {
-  transform: rotate(5deg);
+  transform: rotate(0deg);
 }
 
-.birthdayCard.opened .cardFront,
-.birthdayCard:hover .cardFront {
+.birthdayCard.opened .cardFront {
   transform: rotateY(-175deg);
 }

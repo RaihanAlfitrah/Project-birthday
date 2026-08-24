@@ -13,7 +13,7 @@
           <h3 class="back">HAPPY BIRTHDAY SAYANG!</h3>
           <p>From Raihan,</p>
           <p>
-            Selamat ulang tahun untuk pasangan yang sangat kusayangi dan kucintai. Semoga di hari istimewa ini, kamu merasa dihargai dan dikelilingi oleh kebahagiaan dan kebaikan. Aku bersyukur bahwa aku diberikan kesempatan untuk merayakan hari spesialmu bersamamu 🎉🎂❤️🥂
+            Selamat ulang tahun untuk pasangan yang sangat kusayangi dan kucintai. Semoga di hari istimewa ini, kamu merasa dihargai dan dikelilingi oleh kebahagiaan dan kebaikan. Aku bersyukur bahwa aku diberikan kesempatan untuk merayakan hari spesialmu bersamamu. <br> I LOVE U BABE 🎉🎂❤️🥂
           </p>
           <p>Selamat Ulang Tahun Sayang</p>
         </div>
@@ -44,15 +44,18 @@
     <script>
       const birthdayCard = document.querySelector('.birthdayCard');
       const birthdaySong = document.getElementById('birthdaySong');
+      const chorusStartSeconds = 48; // sesuaikan angka ini sesuai titik reff lagu
+
+      birthdaySong.volume = 0.1;
 
       function openCard() {
         birthdayCard.classList.add('opened');
+        birthdaySong.currentTime = chorusStartSeconds;
+        birthdaySong.volume = 0.3;
         birthdaySong.play().catch(() => {});
       }
 
-      birthdayCard.addEventListener('mouseenter', openCard);
       birthdayCard.addEventListener('click', openCard);
-      birthdayCard.addEventListener('focusin', openCard);
     </script>
   </body>
 </html>
