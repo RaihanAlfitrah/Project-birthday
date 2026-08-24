@@ -32,7 +32,7 @@ body {
   .bdHat {
    width: 140px;
     height: auto;
-    top: %;
+    top: 5%;
     left: 7%;
     position: absolute;
     z-index: 4;
@@ -44,15 +44,7 @@ body {
     right: -10px;
     top: 30px;
   }
-.cake    {
-  display: flex;
-  position: absolute;
-    width: 140px;
-    height: auto;
 
-  right:30%;
-    top: 60%;
-}
   .taaImg {
     display: flex;
     justify-content: center;
@@ -68,7 +60,7 @@ body {
     left: 15%;
     top: 84%;
     font-size: 1.5em;
-   font-family: 'Miltonian Tattoo', serif;
+    font-family: 'Miltonian Tattoo', serif;
     color: hotpink;
     position: absolute;
     transition: 0.1s;
